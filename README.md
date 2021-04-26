@@ -3,4 +3,5 @@ Social Media App following the tutorial by freeCodeCamp.org, called 'React/Graph
   https://www.youtube.com/watch?v=n1mdAPFq2Os
 
 GraphQL playground at: localhost:5000
+
 Clusters found at mongodb.com account
