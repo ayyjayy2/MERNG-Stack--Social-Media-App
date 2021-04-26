@@ -56,7 +56,9 @@ const { MONGODB } = require('./config.js');
 //3a. set up apollo server instance
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    //step 22b. destructure request and forward it in the request body
+    context: ( { req }) => ( { req }) 
 });
 
 //step 4b. connect to db. get connection string from mongodb.com dashboard

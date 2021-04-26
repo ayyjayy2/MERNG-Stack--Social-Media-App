@@ -28,6 +28,9 @@ module.exports = gql`
     type Query{
         #step 12d
         getPosts: [Post]
+
+        #step 21a. 
+        getPost(postId: ID!): Post #returns only one post
     }
     #step 16 authenticate users. arguments are inputs from user
     #the register with arguments registerInput of type RegisterInput return the value of User as both are then defined above
@@ -35,5 +38,9 @@ module.exports = gql`
         register(registerInput: RegisterInput): User!
         # step 20c
         login(username: String!, password: String!): User!
+
+        #step 21b.
+        createPost(body: String!): Post!
+        deletePost(postId: ID!): String! #doesn't matter what returns as long as delete succcessfully
     }
 ` 

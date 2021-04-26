@@ -1,0 +1,90 @@
+Testing page for all inputs to graphQL playground (found at localhost:5000)
+
+************************************* Register ***********************************************
+    mutation{
+    register(registerInput:{
+        username:"user"
+        email:"user@email.com"
+        password:"123456"
+        confirmPassword: "123456"
+    }){
+        id
+        username 
+        email
+        token 
+        createdAt
+    }
+    }
+
+
+    [this one outputs error message for me]:
+    {
+    "errors": [
+        {
+        "message": "Cannot return null for non-nullable field Mutation.register.",
+
+        etc....
+
+
+************************************* Login ************************************************
+    mutation {
+    login(username:"user", password:"1234567"){
+        id 
+        email 
+        token 
+        username 
+        createdAt 
+    }
+    }
+
+    [gives me same error as register]
+
+
+************************************* getPosts ************************************************
+   query{
+    getPosts{
+        id
+        body 
+        username 
+        createdAt
+    }
+   }
+
+
+************************************* getPost ************************************************
+    {
+    getPost(postId:"6082f749b1a3fd9baea53a87"){
+        id 
+        body
+        createdAt 
+        username 
+    }
+    }   
+
+
+************************************* CreatePost ************************************************
+    mutation{
+    createPost(body:"This is another post"){
+        id 
+        body 
+        createdAt 
+        username 
+    }
+    }
+
+    [returns the right response]:
+    "errors": [
+        {
+        "message": "Authorization header must be provided",
+
+    **slide up 'HTTP HEADERS'**
+    enter: (must be 'Bearer <token>')
+
+    {
+        "Authorization": "Bearer tokenName"
+    }
+    **returns: 
+    "errors": [
+        {
+        "message": "Invalid/Expired token",
+    **go ba

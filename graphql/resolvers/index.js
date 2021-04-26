@@ -9,6 +9,8 @@ module.exports = {
     },
     //step 16d
     Mutation: {
-        ...usersResolvers.Mutation
+        ...usersResolvers.Mutation,
+        //step 23d
+        ...postsResolvers.Mutation
     }
 }

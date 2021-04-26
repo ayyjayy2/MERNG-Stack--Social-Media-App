@@ -122,7 +122,7 @@ module.exorts = {
             ...res._doc, //where document is stored 
             id: res._id,
             token
-        }
-        }
+        };
+       }
     }
 }

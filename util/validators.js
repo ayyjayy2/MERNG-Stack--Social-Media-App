@@ -15,7 +15,7 @@ module.exports.validateRegisterInput = (
         errors.email = 'Email must not be empty';
     }else{
         //i added '' bc it was open otherwise??
-        const regEx = '/^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9}$/';
+        const regEx = /^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9}$/;
         if(!email.match(regEx)){
             //if not matching regEx (regular expression)
             errors.email= 'Email must be a valid email address';
