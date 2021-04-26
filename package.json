@@ -1,0 +1,35 @@
+{
+  "name": "social-media-app",
+  "version": "1.0.0",
+  "description": "following youtube tutorial 'React/GraphQL Course - Build a social media app (MERNG Stack)' by freeCodeCamp.org",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
+  },
+  "keywords": [
+    "MERNG",
+    "Stack",
+    "social",
+    "media",
+    "MongoDB",
+    "Express",
+    "React",
+    "Node.js",
+    "Graph"
+  ],
+  "author": "Alayna Johnston",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.23.0",
+    "bcryptjs": "^2.4.3",
+    "graphql": "^15.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.5",
+    "mongoose-update-if-current": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
